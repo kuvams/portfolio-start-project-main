@@ -12,8 +12,12 @@ export const RightMenu = () => {
 }
 
 const StyledRightMenu = styled.nav`
-    max-width: 108px;
+    min-width: 108px;
     flex-direction: column;
     background-color: #afd856;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
 `
 

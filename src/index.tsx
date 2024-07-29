@@ -4,14 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { GlobalStyles } from './styles/GlobalStyles';
+import { LeftMenu } from './layout/leftMenu/LeftMenu';
+import { RightMenu } from './layout/rightMenu/RightMenu';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <LeftMenu />
+    <RightMenu />
     <App />
-    <GlobalStyles/>
+    <GlobalStyles />
   </React.StrictMode>
 );
 

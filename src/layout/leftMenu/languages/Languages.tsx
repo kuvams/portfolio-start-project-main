@@ -25,12 +25,15 @@ export const Languages = () => {
 }
 
 const StyledLanguages = styled.div`
-    
+    h3 {
+        margin-bottom: 15px;
+    }
 `
 
 const StyledLanguageBlock = styled.div`
     div {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
 `

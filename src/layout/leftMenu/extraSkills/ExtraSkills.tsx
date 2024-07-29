@@ -34,10 +34,13 @@ export const ExtraSkills = () => {
 }
 
 const StyledExtraSkills = styled.div`
-    
+    h3 {
+        margin-bottom: 15px;
+    }
 `
 
 const ExtraSkill = styled.div`
     display:  flex;
     gap: 5px;
+    margin-bottom: 5px;
 `

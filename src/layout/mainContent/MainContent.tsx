@@ -30,8 +30,12 @@ export const MainContent = () => {
 }
 
 const StyledMainContent = styled.main`
-    max-width: 970px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     gap: 70px;
+    margin: 0 auto;
+    margin-left: 320px;
 `
