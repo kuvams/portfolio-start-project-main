@@ -1,4 +1,4 @@
-import styled from "styled-components"
+// import styled from "styled-components"
 import iconsSprite from "../../assets/imgs/icons/sprite.svg"
 
 type IconPropsType = {
@@ -9,25 +9,27 @@ type IconPropsType = {
     fill?: string
     stroke?: string
     circle?: boolean
+    className?: string
 }
 
 export const Icon = (props: IconPropsType) => {
     return (
-        <StyledSvg>
-            <svg
-                stroke={props.stroke || "none"}
-                fill={props.fill || "none"}
-                width={props.width || "20"}
-                height={props.height || "20"}
-                viewBox={props.viewBox || "0"}
-                xmlns="http://www.w3.org/2000/svg">
+        <svg
+        className={props.className || "" }
+        stroke={props.stroke || "none"}
+        fill={props.fill || "black"}
+        width={props.width || "20px"}
+        height={props.height || "20px"}
+        viewBox={props.viewBox || "0"}
+        xmlns="http://www.w3.org/2000/svg">
                 <use xlinkHref={`${iconsSprite}#${props.iconId}`} />
             </svg>
-        </StyledSvg>
+        //             <StyledSvg>
+        // </StyledSvg>
     )
 }
 
-const StyledSvg = styled.div`
+// const StyledSvg = styled.div`
     /* &::before {
         content: "";
         display: inline-block;
@@ -35,4 +37,4 @@ const StyledSvg = styled.div`
         height: 100%;
         background-color: #e00d0d;
     }     */
-`
+// `

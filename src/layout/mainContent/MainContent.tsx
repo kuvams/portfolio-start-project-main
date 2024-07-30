@@ -14,14 +14,20 @@ import { Footer } from "./footer/Footer"
 export const MainContent = () => {
     return (
         <StyledMainContent>
+            <a id="home"></a>
             <Header/>
+            <a id="services"></a>
             <Services/>
             <PricePlans/>
             <Recomendation/>
+            <a id="education"></a>
             <Education/>
             <WorkHistory/>
+            <a id="portfolio"></a>
             <Portfolio/>
+            <a id="blog"></a>
             <Blog/>
+            <a id="contact"></a>
             <Contact/>
             <SameLogos/>
             <Footer/>

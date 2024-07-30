@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import mapImage from "../../../assets/imgs/map.webp"
 import { Icon } from "../../../components/icon/Icon"
+import { theme } from "../../../styles/Theme"
 
 export const Contact = () => {
     return (
@@ -23,19 +24,25 @@ export const Contact = () => {
                 <StyledContactInformation>
                     <h2>Contact Information</h2>
                     <StyledContactCard>
-                        <Icon iconId={'location'} viewBox="0 0 40 40" />
+                        <div className="bgCircle">
+                            <Icon iconId={'location'} width="40" height="40" viewBox="-12.5 -12.5 40 40" />
+                        </div>
                         <div><h4>Country:</h4><p>Belarus</p></div>
                         <div className="center"><h4>City:</h4><p>Pinsk</p></div>
                         <div><h4>Street:</h4><p>Molchanova</p></div>
                     </StyledContactCard>
                     <StyledContactCard>
-                        <Icon iconId={'mail'} />
+                        <div className="bgCircle">
+                            <Icon iconId={'mail'} width="40" height="40" viewBox="-12.5 -13.25 40 40"/>
+                        </div>
                         <div><h4>Email:</h4><p>dimabelanovskiy@outlook.com</p></div>
                         <div className="center"><h4>Skype:</h4><p>-</p></div>
                         <div><h4>Telegram:</h4><p>@kuvams</p></div>
                     </StyledContactCard>
                     <StyledContactCard>
-                        <Icon iconId={'mobile'} />
+                        <div className="bgCircle">
+                            <Icon iconId={'mobile'} width="40" height="40" viewBox="-14.75 -12.5 40 40"/>
+                        </div>
                         <div><h4>Support Service:</h4><p>123123</p></div>
                         <div className="center"><h4>Office:</h4><p>123123</p></div>
                         <div><h4>Personal:</h4><p>123123</p></div>
@@ -106,8 +113,25 @@ const StyledContactCard = styled.div`
     margin-bottom: 18px;
     min-height: 210px;
     background-color: #ffffff;
+    text-align: center;
     svg {
         margin-bottom: 31px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+    .bgCircle {
+        position: relative;
+    }
+    .bgCircle::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: ${theme.colors.accent};
+        border-radius: 50%;
     }
     div {
         display: flex;

@@ -4,6 +4,7 @@ import secBlogImage from "../../../assets/imgs/Imageportfolio-1.webp"
 import thirdBlogImage from "../../../assets/imgs/Imageportfolio-2.webp"
 import { MainContentBlock } from "../../../components/mainContentBlock/MainContentBlock"
 import { Icon } from "../../../components/icon/Icon"
+import { theme } from "../../../styles/Theme"
 
 export const Blog = () => {
     return (
@@ -17,7 +18,7 @@ export const Blog = () => {
                         <div className="content">
                             <h4>How to make web tempates</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna</p>
-                            <a href="/">Learn More <Icon width="6" height="8" viewBox="0 0 6 8" iconId="arrowRight"/></a>
+                            <a href="/">Learn More <Icon fill={theme.colors.accent} width="6" height="8" iconId="arrowRight"/></a>
                         </div>
                     </StyledPost>
                     <StyledPost>
@@ -25,7 +26,7 @@ export const Blog = () => {
                         <div className="content">
                             <h4>How to make web tempates</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna</p>
-                            <a href="/">Learn More <Icon width="6" height="8" viewBox="0 0 6 8" iconId="arrowRight"/></a>
+                            <a href="/">Learn More <Icon fill={theme.colors.accent} width="6" height="8" iconId="arrowRight"/></a>
                         </div>
                     </StyledPost>
                     <StyledPost>
@@ -33,7 +34,7 @@ export const Blog = () => {
                         <div className="content">
                             <h4>How to make web tempates</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna</p>
-                            <a href="/">Learn More <Icon width="6" height="8" viewBox="0 0 6 8" iconId="arrowRight"/></a>
+                            <a href="/">Learn More <Icon fill={theme.colors.accent} width="6" height="8" iconId="arrowRight"/></a>
                         </div>
                     </StyledPost>
                 </StyledBlogList>

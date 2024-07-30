@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -9,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        background-color: #F0F0F6;
+        background-color: ${theme.colors.gradient.light};
         font-family: 'Inter', sans-serif;
         ul, ol {
             list-style: none;
@@ -23,6 +24,7 @@ export const GlobalStyles = createGlobalStyle`
         }
         h3 {
             font-size: 24px;
+            font-weight: 600;
         }
         h4{
             font-size: 18px;
@@ -30,7 +32,9 @@ export const GlobalStyles = createGlobalStyle`
         }
         p {
             font-size: 15px;
-            color: #767676;
+            font-weight: 400;
+            color: ${theme.colors.gradient.lightGrey};
+            line-height: 24px;
         }
     }
 `

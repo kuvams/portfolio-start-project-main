@@ -4,6 +4,7 @@ import fRecPhoto from "../../../assets/imgs/Profilereview.webp"
 import sRecPhoto from "../../../assets/imgs/Profilereview-1.webp"
 import tRecPhoto from "../../../assets/imgs/Profilereview-2.webp"
 import { MainContentBlock } from "../../../components/mainContentBlock/MainContentBlock"
+import { theme } from "../../../styles/Theme"
 
 export const Recomendation = () => {
     return (
@@ -14,7 +15,7 @@ export const Recomendation = () => {
                 <StyledRecomendationList>
                     <StyledRecomendationCard>
                         <StyledRecStarsBlock>
-                            <Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} />
+                            <Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/>
                         </StyledRecStarsBlock>
                         <h4>Great Quality!</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....</p>
@@ -28,7 +29,7 @@ export const Recomendation = () => {
                     </StyledRecomendationCard>
                     <StyledRecomendationCard>
                         <StyledRecStarsBlock>
-                            <Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} />
+                            <Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/>
                         </StyledRecStarsBlock>
                         <h4>Amazing work!</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....</p>
@@ -42,7 +43,7 @@ export const Recomendation = () => {
                     </StyledRecomendationCard>
                     <StyledRecomendationCard>
                         <StyledRecStarsBlock>
-                            <Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} /><Icon iconId={'star'} />
+                            <Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/><Icon iconId={'star'} fill={theme.colors.accent}/>
                         </StyledRecStarsBlock>
                         <h4>Great Quality!</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....</p>
@@ -68,6 +69,7 @@ const StyledRecomendationCard = styled.div`
     padding: 25px;
     h4 {
         margin-bottom: 18px;
+        margin-top: 17px;
     }
     p {
         text-align: start;
@@ -76,6 +78,7 @@ const StyledRecomendationCard = styled.div`
 `
 const StyledRecStarsBlock = styled.div`
     display: flex;
+    gap: 10px;
     `
 
 const StyledRecomendatorBlock = styled.div`
