@@ -12,8 +12,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <LeftMenu />
-    <RightMenu />
     <App />
     <GlobalStyles />
   </React.StrictMode>

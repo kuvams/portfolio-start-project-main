@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { MainContentBlock } from "../../../components/mainContentBlock/MainContentBlock"
+import { theme } from "../../../styles/Theme"
 
 export const WorkHistory = () => {
     return (
@@ -15,6 +16,7 @@ export const WorkHistory = () => {
                         date={"Jan 1016 - Dec 2021"}
                         text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui."}
                     />
+                    <hr />
                     <WorkBlock
                         place={"Junior Web Designer"}
                         doc={"Certificate of Web Training"}
@@ -22,6 +24,7 @@ export const WorkHistory = () => {
                         date={"Jan 1016 - Dec 2021"}
                         text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui."}
                     />
+                    <hr />
                     <WorkBlock
                         place={"Junior Web Designer"}
                         doc={"Certificate of Web Training"}
@@ -37,16 +40,32 @@ export const WorkHistory = () => {
 
 const StyledWorkList = styled.div`
     background-color: #fff;
-    padding: 42px 33px;
+    padding: 42px 0;
     display: flex;
     flex-direction: column;
     gap: 28px;
+    hr {
+        width: 100%;
+        background-color: ${theme.colors.gradient.light};
+        border: none;
+        height: 1px;
+    }
 `
 
 const StyledWorkBlock = styled.div`
     display: flex;
+    margin: 0 33px;
+
+    @media ${theme.media.tablet} {
+        flex-wrap: wrap;
+    }
+
     h4 {
         margin-bottom: 28px;
+
+        @media ${theme.media.tablet} {
+            margin-bottom: 10px;
+        }
     }
     .pos {
         color : #000000;
@@ -58,6 +77,10 @@ const StyledWorkBlock = styled.div`
     }
     .info {
         flex-basis: 140%;
+
+        @media ${theme.media.tablet} {
+            margin-bottom: 30px;
+        }
     }
     .date {
         background-color: #FFB400;

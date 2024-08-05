@@ -8,7 +8,9 @@ import { RightMenu } from './layout/rightMenu/RightMenu';
 function App() {
     return (
         <StyledPage>
-            <MainContent/>
+            <LeftMenu />
+            <RightMenu />
+            <MainContent />
         </StyledPage>
     );
 }
@@ -16,7 +18,9 @@ function App() {
 export default App;
 
 const StyledPage = styled.div`
-    height: 100vh;
+    /* height: 100vh; */
+    width: 100%;
+    display: flex;
 `
 
 

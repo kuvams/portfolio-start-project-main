@@ -12,5 +12,11 @@ export const theme = {
             light: '#F0F0F6',
             white: '#FFFFFF',
         }
-    }
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 375px)",
+        sideBar: "screen and (max-width: 1430px)",
+    },
 }

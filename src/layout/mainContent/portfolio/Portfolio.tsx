@@ -17,49 +17,47 @@ export const Portfolio = () => {
             content="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
             children={
                 <div>
-                    <StyledPortfolioFilters>
-                        <ul>
+                    {/* <StyledPortfolioFilters>
                             <li><h4>All Categories</h4></li>
                             <li><h4>UI Design</h4></li>
                             <li><h4>Web Templates</h4></li>
                             <li><h4>Logo</h4></li>
                             <li><h4>Branding</h4></li>
-                        </ul>
-                    </StyledPortfolioFilters>
+                    </StyledPortfolioFilters> */}
                     <StyledPortfolioList>
-                        <StyledPortfolioElement><img src={firPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={secPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={thirdPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={foursPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={fivesPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={sixsPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={sevensPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={eightsPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
-                        <StyledPortfolioElement><img src={ninesPortfolioImage} alt="portfolio item"></img></StyledPortfolioElement>
+                        <img src={firPortfolioImage} alt="portfolio item"></img>
+                        <img src={secPortfolioImage} alt="portfolio item"></img>
+                        <img src={thirdPortfolioImage} alt="portfolio item"></img>
+                        <img src={foursPortfolioImage} alt="portfolio item"></img>
+                        <img src={fivesPortfolioImage} alt="portfolio item"></img>
+                        <img src={sixsPortfolioImage} alt="portfolio item"></img>
+                        <img src={sevensPortfolioImage} alt="portfolio item"></img>
+                        <img src={eightsPortfolioImage} alt="portfolio item"></img>
+                        <img src={ninesPortfolioImage} alt="portfolio item"></img>
                     </StyledPortfolioList>
                 </div>
             } />
     )
 }
 
-const StyledPortfolioFilters = styled.nav`
-            ul{
+const StyledPortfolioFilters = styled.ul`
             display: flex;
+            /* flex-wrap: wrap; */
             justify-content: center;
             gap: 20px;
-    }
-    margin-bottom: 50px;
-            `
+            margin-bottom: 50px;
+`
 
 const StyledPortfolioList = styled.div`
             display: flex;
+            justify-content: space-evenly;
             flex-wrap: wrap;
             gap: 20px;
             `
 const StyledPortfolioElement = styled.div`
             flex-grow: 1;
             img {
-                width: 100%;
-            height: 100%;
-}
+                max-width: 310px;
+                max-height: 304px;
+            }
             `

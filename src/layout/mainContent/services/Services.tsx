@@ -11,7 +11,7 @@ export const Services = () => {
         content={"Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do Amet Sint. Velit Officia Consequat Duis Enim Velit Mollit. Lorem Ipsum"} 
         children={
             <StyledServicesList>
-                <StyledSLFirstRow>
+                {/* <StyledSLFirstRow> */}
                     <StyledServiceBox>
                         <Icon iconId={`Web`} fill={theme.colors.accent} width="66" height="90" viewBox="0 -18 66 90"/>
                         <h4>Web Development</h4>
@@ -27,8 +27,8 @@ export const Services = () => {
                         <h4>Sound Design</h4>
                         <p>Voice Over, Beat Making</p>
                     </StyledServiceBox>
-                </StyledSLFirstRow>
-                <StyledSLSecondRow>
+                {/* </StyledSLFirstRow> */}
+                {/* <StyledSLSecondRow> */}
                     <StyledServiceBox>
                         <Icon iconId={`gameDev`} fill={theme.colors.accent} width="74" height="90" viewBox="0 -10 74 90"/>
                         <h4>Game Design</h4>
@@ -39,12 +39,12 @@ export const Services = () => {
                         <h4>Photography</h4>
                         <p>Portrait, Produkt Photography</p>
                     </StyledServiceBox>
-                    <StyledServiceBox>
+                    <StyledServiceBox className="last">
                         <h4>Advertising</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.</p>
                         <a href="/">ORDER NOW <Icon iconId="arrowRight" fill={theme.colors.accent} width="6" height="8" viewBox="0 0 6 8"/></a>
                     </StyledServiceBox>
-                </StyledSLSecondRow>
+                {/* </StyledSLSecondRow> */}
                 {/* TODO : Сделать один компонент для сервисов */}
             </StyledServicesList>
         }/>
@@ -54,20 +54,9 @@ export const Services = () => {
 
 const StyledServicesList = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 20px;
-`
-
-const StyledSLFirstRow = styled.div`
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-`
-
-const StyledSLSecondRow = styled.div`
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
 `
 
 const StyledServiceBox = styled.div`
@@ -76,6 +65,8 @@ const StyledServiceBox = styled.div`
     width: 310px;
     background-color: #ffffff;
     text-align: center;
+    .last {
+    }
     h4 {
         margin-bottom: 15px;
     }

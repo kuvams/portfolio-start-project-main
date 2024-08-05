@@ -2,6 +2,7 @@ import styled from "styled-components"
 import mapImage from "../../../assets/imgs/map.webp"
 import { Icon } from "../../../components/icon/Icon"
 import { theme } from "../../../styles/Theme"
+import { YMaps, Map } from "@pbe/react-yandex-maps"
 
 export const Contact = () => {
     return (
@@ -33,7 +34,7 @@ export const Contact = () => {
                     </StyledContactCard>
                     <StyledContactCard>
                         <div className="bgCircle">
-                            <Icon iconId={'mail'} width="40" height="40" viewBox="-12.5 -13.25 40 40"/>
+                            <Icon iconId={'mail'} width="40" height="40" viewBox="-12.5 -13.25 40 40" />
                         </div>
                         <div><h4>Email:</h4><p>dimabelanovskiy@outlook.com</p></div>
                         <div className="center"><h4>Skype:</h4><p>-</p></div>
@@ -41,7 +42,7 @@ export const Contact = () => {
                     </StyledContactCard>
                     <StyledContactCard>
                         <div className="bgCircle">
-                            <Icon iconId={'mobile'} width="40" height="40" viewBox="-14.75 -12.5 40 40"/>
+                            <Icon iconId={'mobile'} width="40" height="40" viewBox="-14.75 -12.5 40 40" />
                         </div>
                         <div><h4>Support Service:</h4><p>123123</p></div>
                         <div className="center"><h4>Office:</h4><p>123123</p></div>
@@ -49,12 +50,18 @@ export const Contact = () => {
                     </StyledContactCard>
                 </StyledContactInformation>
             </StyledContactBlock>
-            <img src={mapImage} alt='Map' />
+            <YMaps>
+                <Map 
+                    style={{width: "100%", height: "300px"}}
+                    defaultState={{ center: [52.115482, 26.102875], zoom: 15 }} />
+            </YMaps>
+            {/* <img src={mapImage} alt='Map' /> */}
         </StyledContact>
     )
 }
 
 const StyledContact = styled.div`
+margin-top: 70px;
 `
 const StyledLeaveInfo = styled.div`
     flex-grow: 21;
@@ -101,6 +108,7 @@ const StyledContactInformation = styled.div`
 `
 const StyledContactBlock = styled.div`
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 30px;
     h2 {

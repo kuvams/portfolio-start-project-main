@@ -30,14 +30,19 @@ export const LeftMenu = () => {
 
 const StyledLeftMenu = styled.div`
     background-color: #ffffff;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     bottom: 0;
-    min-width: 305px;
+    max-height: 1315px;
+    max-width: 305px;
     padding: 50px 43px 25px 43px;
     hr {
         margin: 25px 0;
+    }
+
+    @media ${theme.media.sideBar} {
+        display: none;
     }
 `
 

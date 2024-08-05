@@ -10,27 +10,29 @@ import { Blog } from "./blog/Blog"
 import { Contact } from "./contact/Contact"
 import { SameLogos } from "./sameLogos/SameLogos"
 import { Footer } from "./footer/Footer"
+import { LeftMenu } from "../leftMenu/LeftMenu"
+import { RightMenu } from "../rightMenu/RightMenu"
 
 export const MainContent = () => {
     return (
         <StyledMainContent>
             <a id="home"></a>
-            <Header/>
+            <Header />
             <a id="services"></a>
-            <Services/>
-            <PricePlans/>
-            <Recomendation/>
+            <Services />
+            <PricePlans />
+            <Recomendation />
             <a id="education"></a>
-            <Education/>
-            <WorkHistory/>
+            <Education />
+            <WorkHistory />
             <a id="portfolio"></a>
-            <Portfolio/>
+            <Portfolio />
             <a id="blog"></a>
-            <Blog/>
+            <Blog />
             <a id="contact"></a>
-            <Contact/>
-            <SameLogos/>
-            <Footer/>
+            <Contact />
+            <SameLogos />
+            <Footer />
         </StyledMainContent>
     )
 }
@@ -41,7 +43,8 @@ const StyledMainContent = styled.main`
     padding: 0 15px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    /* gap: 70px; */
     margin: 0 auto;
-    margin-left: 320px;
+    /* margin-left: 320px;
+    margin-right: 120px; */
 `

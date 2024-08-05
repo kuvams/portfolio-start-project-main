@@ -6,15 +6,15 @@ export const Profile = () => {
     return (
         <StyledProfile>
             <img src={profilePhoto} height={"150"} width={"150"} alt="face of profiler" />
-            <h3>Rayan Adlardard</h3>
+            <h3>Dzimitry Belanouski</h3>
             <p>Font-end Developer</p>
             <StyledSocNets>
-                <Icon height="24" width="24" iconId="fb" />
-                <Icon height="24" width="24" iconId="inst" />
-                <Icon height="24" width="24" iconId="tw" />
-                <Icon height="24" width="24" iconId="li" />
-                <Icon height="24" width="24" iconId="yt" />
-                <Icon height="24" width="24" iconId="dribbb" />
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="fb" /></a>
+                <a href="https://www.instagram.com/_kuvams_/" target="_blank"><Icon height="24" width="24" iconId="inst" /></a>
+                <a href="https://x.com/belanouski25" target="_blank"><Icon height="24" width="24" iconId="tw" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="li" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="yt" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="dribbb" /></a>
             </StyledSocNets>
         </StyledProfile>
     )

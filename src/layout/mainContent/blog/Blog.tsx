@@ -44,10 +44,13 @@ export const Blog = () => {
 
 const StyledBlogList = styled.div`
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 20px;
 `
 
 const StyledPost = styled.div`
+    max-width: 310px;
     background-color: #ffffff;
     .content {
         padding: 25px 25px 16px 25px;

@@ -20,6 +20,9 @@ const StyledMainContentBlock = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    h2 {
+        margin-top: 70px;
+    }
     .blockInfo {
         margin-top: 25px;
         max-width: 438px;

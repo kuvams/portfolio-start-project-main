@@ -62,9 +62,12 @@ export const Recomendation = () => {
 
 const StyledRecomendationList = styled.div`
     display: flex;
-    gap: 21px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
 `
 const StyledRecomendationCard = styled.div`
+    max-width: 310px;
     background-color: #fff;
     padding: 25px;
     h4 {
@@ -85,6 +88,10 @@ const StyledRecomendatorBlock = styled.div`
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
+    img {
+        max-width: 80px;
+        max-height: 80px;
+    }
     h4 {
         margin-bottom: 0;
     }
