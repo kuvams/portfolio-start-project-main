@@ -2,27 +2,27 @@ import styled from "styled-components"
 import { Icon } from "../../../components/icon/Icon"
 import { MainContentBlock } from "../../../components/mainContentBlock/MainContentBlock"
 import { theme } from "../../../styles/Theme"
-import Carousel from "react-multi-carousel"
-import "react-multi-carousel/lib/styles.css"
+// import Carousel from "react-multi-carousel"
+// import "react-multi-carousel/lib/styles.css"
 
 export const PricePlans = (props: any) => {
-    const responsive = {
-        desktop: {
-            breakpoint: { max: 1440, min: 1000 },
-            items: 2.13,
-            partialVisibilityGutter: -23,
-        },
-        tablet: {
-            breakpoint: { max: 999, min: 464 },
-            items: 3.13,
-            partialVisibilityGutter: -200,
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 5,
-            partialVisibilityGutter: 0,
-        }
-    }
+    // const responsive = {
+    //     desktop: {
+    //         breakpoint: { max: 1440, min: 1000 },
+    //         items: 2.13,
+    //         partialVisibilityGutter: -23,
+    //     },
+    //     tablet: {
+    //         breakpoint: { max: 999, min: 464 },
+    //         items: 3.13,
+    //         partialVisibilityGutter: -200,
+    //     },
+    //     mobile: {
+    //         breakpoint: { max: 464, min: 0 },
+    //         items: 5,
+    //         partialVisibilityGutter: 0,
+    //     }
+    // }
    
     return (
         <MainContentBlock
@@ -170,10 +170,9 @@ export const PricePlans = (props: any) => {
 }
 
 const StyledPlansList = styled.div`
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
     h3 {
         text-align: center;
         margin-bottom: 19px;
@@ -187,7 +186,6 @@ const StyledPlansList = styled.div`
 
 const StyledPlan = styled.div`
     background-color: #fff;
-    width: 310px;
     /* margin-right: 20px; */
     padding: 54px 30px 25px;
     text-align: center;
@@ -197,6 +195,8 @@ const StyledPlan = styled.div`
     .description {
         margin-top: 8px;
         margin-bottom: 21px;
+    }
+    ul {
     }
     li {
         display: flex;

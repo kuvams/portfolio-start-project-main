@@ -10,8 +10,6 @@ import { Blog } from "./blog/Blog"
 import { Contact } from "./contact/Contact"
 import { SameLogos } from "./sameLogos/SameLogos"
 import { Footer } from "./footer/Footer"
-import { LeftMenu } from "../leftMenu/LeftMenu"
-import { RightMenu } from "../rightMenu/RightMenu"
 
 export const MainContent = () => {
     return (

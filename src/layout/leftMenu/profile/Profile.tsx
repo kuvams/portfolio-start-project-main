@@ -6,15 +6,15 @@ export const Profile = () => {
     return (
         <StyledProfile>
             <img src={profilePhoto} height={"150"} width={"150"} alt="face of profiler" />
-            <h3>Dzimitry Belanouski</h3>
+            <h3>Rayan Adlrdard</h3>
             <p>Font-end Developer</p>
             <StyledSocNets>
-                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="fb" /></a>
-                <a href="https://www.instagram.com/_kuvams_/" target="_blank"><Icon height="24" width="24" iconId="inst" /></a>
-                <a href="https://x.com/belanouski25" target="_blank"><Icon height="24" width="24" iconId="tw" /></a>
-                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="li" /></a>
-                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="yt" /></a>
-                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/" target="_blank"><Icon height="24" width="24" iconId="dribbb" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/"><Icon height="24" width="24" iconId="fb" /></a>
+                <a href="https://www.instagram.com/_kuvams_/"><Icon height="24" width="24" iconId="inst" /></a>
+                <a href="https://x.com/belanouski25"><Icon height="24" width="24" iconId="tw" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/"><Icon height="24" width="24" iconId="li" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/"><Icon height="24" width="24" iconId="yt" /></a>
+                <a href="https://www.linkedin.com/in/дима-белановский-b72849279/"><Icon height="24" width="24" iconId="dribbb" /></a>
             </StyledSocNets>
         </StyledProfile>
     )

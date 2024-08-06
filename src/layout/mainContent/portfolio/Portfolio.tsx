@@ -49,15 +49,10 @@ const StyledPortfolioFilters = styled.ul`
 `
 
 const StyledPortfolioList = styled.div`
-            display: flex;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
             gap: 20px;
-            `
-const StyledPortfolioElement = styled.div`
-            flex-grow: 1;
             img {
-                max-width: 310px;
-                max-height: 304px;
+                width: 100%;
             }
-            `
+`

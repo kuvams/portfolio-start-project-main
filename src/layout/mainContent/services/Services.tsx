@@ -53,16 +53,14 @@ export const Services = () => {
 }
 
 const StyledServicesList = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-auto-rows: 220px;
     gap: 20px;
 `
 
 const StyledServiceBox = styled.div`
     padding: 30px 25px 25px;
-    height: 225px;
-    width: 310px;
     background-color: #ffffff;
     text-align: center;
     .last {

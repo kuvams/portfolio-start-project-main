@@ -48,7 +48,7 @@ const StyledWorkList = styled.div`
         width: 100%;
         background-color: ${theme.colors.gradient.light};
         border: none;
-        height: 1px;
+        height: 2px;
     }
 `
 
@@ -56,14 +56,14 @@ const StyledWorkBlock = styled.div`
     display: flex;
     margin: 0 33px;
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.workEdu} {
         flex-wrap: wrap;
     }
 
     h4 {
         margin-bottom: 28px;
 
-        @media ${theme.media.tablet} {
+        @media ${theme.media.workEdu} {
             margin-bottom: 10px;
         }
     }
@@ -78,7 +78,7 @@ const StyledWorkBlock = styled.div`
     .info {
         flex-basis: 140%;
 
-        @media ${theme.media.tablet} {
+        @media ${theme.media.workEdu} {
             margin-bottom: 30px;
         }
     }

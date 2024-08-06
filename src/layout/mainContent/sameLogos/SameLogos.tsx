@@ -20,7 +20,7 @@ const StyledLogos = styled.div`
     svg {
         min-width: 140px;
 
-        @media ${theme.media.tablet} {
+        @media ${theme.media.workEdu} {
         flex-basis: 50%;
         }
     }

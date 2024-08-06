@@ -65,6 +65,7 @@ margin-top: 70px;
 `
 const StyledLeaveInfo = styled.div`
     flex-grow: 21;
+    margin-bottom: 18px;
 button {
     min-height: 35px;
     max-width: 159px;
@@ -108,8 +109,7 @@ const StyledContactInformation = styled.div`
 `
 const StyledContactBlock = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-wrap: wrap-reverse;
     gap: 30px;
     h2 {
         margin-bottom: 50px;

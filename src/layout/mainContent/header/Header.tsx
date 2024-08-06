@@ -1,20 +1,41 @@
 import styled from "styled-components"
 import myPhoto from "../../../assets/imgs/Your Image 1.webp"
 import { theme } from "../../../styles/Theme"
+import { LeftMenu } from "../../leftMenu/LeftMenu"
+import { useState } from "react"
 
 
 export const Header = () => {
+    const [isOpen, setIsOpen] = useState(false)
     return (
-        <StyledHeader>
-            <div>
-                    <h1>I’m Dima Belanouski<br/><span>Front-end</span> Developer</h1>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</h6>
+        <div>
+            <PopupWrapper isOpen={isOpen}>
+                <LeftMenu popup />
+                <BurgerButton popup={true} onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}><span></span></BurgerButton>
+            </PopupWrapper>
+            <StyledHeader>
+                <BurgerButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}><span></span></BurgerButton>
+                <div className="header">
+                    <h1 className="header">I’m Rayan Adlrdard<br /><span className="header">Front-end</span> Developer</h1>
+                    <h6 className="header">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.</h6>
                     <StyledButton>Hire me</StyledButton>
                 </div>
-                <img src={myPhoto} alt="Developer" />
-        </StyledHeader>
+                <img className="header" src={myPhoto} alt="Developer" />
+            </StyledHeader>
+        </div>
     )
 }
+
+const PopupWrapper = styled.div<{ isOpen: boolean }>`
+    display: ${props => props.isOpen ? "block" : "none"};
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    max-width: 500px;
+    /* background-color: rgba(222, 8, 8, 0.7); */
+    z-index: 1;
+`
 
 const StyledHeader = styled.div`
     display: flex;
@@ -23,6 +44,7 @@ const StyledHeader = styled.div`
     align-items: center;
     background-color: white;
     padding: 0 60px;
+    position: relative;
     h1 {
         font-size: 48px;
     }
@@ -46,7 +68,7 @@ const StyledHeader = styled.div`
     }
 
     @media ${theme.media.tablet} {
-        padding: 0 0px;
+        padding: 100px 0px 0px;
     }
 `
 const StyledButton = styled.button`
@@ -56,3 +78,60 @@ const StyledButton = styled.button`
     padding: 16px 32px;
     border-radius: 5px;
 `
+
+const BurgerButton = styled.button<{ isOpen: boolean, popup?: boolean }>`
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: ${props => props.popup ? "92%" : "60px"};
+    transform: ${props => props.popup ? "translateX(-50%)" : "none"};
+    width: 30px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+
+    @media ${theme.media.sideBar} {
+        display: block;
+    }
+
+    ${props => !props.isOpen && `
+        @media ${theme.media.tablet} {
+            left: 30px;
+    }`}
+    
+    span {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: ${theme.colors.accent};
+
+        ${props => props.isOpen && `background-color: rgba(255, 255, 255, 0);`}
+
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: ${theme.colors.accent};
+            transform: translateY(-6px);
+            border-radius: 30px;
+            ${props => props.isOpen && 'transform: rotate(45deg);'}
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: ${theme.colors.accent};
+            transform: translateY(6px);
+            border-radius: 30px;
+            ${props => props.isOpen && 'transform: rotate(-45deg);'}
+        }
+    }
+`
+

@@ -21,12 +21,16 @@ const StyledRightMenu = styled.nav`
     align-items: center;
     background-color: #ffffff;
     order: 1;
-    /* position: fixed;
+    position: fixed;
     top: 0;
     right: 0;
-    bottom: 0; */
+    bottom: 0;
 
     @media ${theme.media.sideBar} {
         display: none;
     }
 `
+
+// TODO: сайдбары fixed, паддинги, чтобы зарезервировать место для майна
+// TODO: все списки сделать гридам, в будующем сделать слайдером
+// TODO: 

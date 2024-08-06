@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Icon iconId="citat" height="20" width="20" viewBox="0 0 20 20"/>
-            <p>2021 All Rights Reserved.Ojjomedia</p>
+            <p>2024 All Rights Reserved.Ojjomedia</p>
         </StyledFooter>
     )
 }

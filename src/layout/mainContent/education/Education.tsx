@@ -55,14 +55,14 @@ const StyledEducationList = styled.div`
 const StyledEducationBlock = styled.div`
     display: flex;
     margin: 0 33px;
-    @media ${theme.media.tablet} {
+    @media ${theme.media.workEdu} {
         flex-wrap: wrap;
     }
 
     h4 {
         margin-bottom: 28px;
 
-        @media ${theme.media.tablet} {
+        @media ${theme.media.workEdu} {
             margin-bottom: 10px;
         }
     }
@@ -77,7 +77,7 @@ const StyledEducationBlock = styled.div`
     .info {
         flex-basis: 140%;
 
-        @media ${theme.media.tablet} {
+        @media ${theme.media.workEdu} {
             margin-bottom: 30px;
         }
     }
